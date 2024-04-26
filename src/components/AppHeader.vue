@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-[#222] shadow-2xl shadow-white w-full p-5">
+  <header class="bg-[#222] w-full p-8">
     <div class="w-full flex justify-between items-center">
 
       <div class="flex items-center text-3xl font-bold">
@@ -10,9 +10,9 @@
         <span>ies</span>
       </div>
 
-      <div class="flex gap-2">
-        <Button label="Login" outlined></Button>
-        <Button label="Cadastro"></Button>
+      <div class="flex gap-2 ">
+        <Button outlined icon="fa fa-arrow-right-to-bracket" label="Login" class="rounded"></Button>
+        <Button  label="Cadastrar" icon="fa fa-user-plus" class="rounded"></Button>
       </div>
     </div>
   </header>
