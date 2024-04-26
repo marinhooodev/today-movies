@@ -1,6 +1,6 @@
 <template>
     <div>
-        Movies
+        Marinho
     </div>
 </template>
 
