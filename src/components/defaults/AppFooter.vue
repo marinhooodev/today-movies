@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-green-600 p-5">
+    <footer class="bg-[#0c0c0c] p-5">
 
     </footer>
 </template>
