@@ -4,15 +4,15 @@
       class="w-full max-w-[60vw] flex flex-col justify-center items-center"
       id="pictureSide"
     >
-      <h1></h1>
+      
     </div>
     <div
-      class="p-3 w-full max-w-[40vw] flex flex-col justify-center items-center gap-10"
+      class="p-10 w-full max-w-[40vw] flex flex-col justify-center items-center gap-10"
       id="loginSide"
     >
       <div class="blurEffect"></div>
       <div class="blurEffect reverse"></div>
-      <h1 class="pb-5 border-b border-white fadeFromInvisible opacity-0">
+      <h1 class="text-center pb-5 border-b border-white fadeFromInvisible opacity-0">
         Bem vindo de volta!
       </h1>
 
@@ -21,12 +21,13 @@
           <label for="email" class="text-lg pb-3 block"> Email: </label>
           <InputGroup>
             <InputGroupAddon>
-              <i class="pi pi-user"></i>
+              <i class="text-white pi pi-user"></i>
             </InputGroupAddon>
             <InputText
               placeholder="seunome@outlook.com"
               v-model="user"
               id="email"
+              variant="filled"
             />
           </InputGroup>
         </div>
@@ -35,18 +36,19 @@
           <label for="user" class="text-lg pb-3 block"> Senha: </label>
           <InputGroup>
             <InputGroupAddon>
-              <i class="pi pi-lock"></i>
+              <i class="text-white pi pi-lock"></i>
             </InputGroupAddon>
             <Password
               placeholder="Senha"
               v-model="password"
               toggleMask
               :feedback="false"
+              variant="filled"
             />
           </InputGroup>
         </div>
 
-        <div class="m-5 fadeUp flex items-end justify-center">
+        <div class="m-5 fadeUp flex items-center justify-center">
           <Button label="Entrar" class="px-20"> </Button>
           <Button label="esqueceu a senha?" link> </Button>
         </div>
