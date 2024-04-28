@@ -24,11 +24,13 @@
           >
           </Button>
         </router-link>
-        <Button
-          label="Cadastrar"
-          icon="fa fa-user-plus"
-          class="rounded"
-        ></Button>
+       <router-link to="/sign-up"> 
+          <Button
+            label="Cadastrar"
+            icon="fa fa-user-plus"
+            class="rounded"
+          ></Button>
+       </router-link>
       </div>
     </div>
   </header>
