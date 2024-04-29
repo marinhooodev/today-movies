@@ -1,19 +1,12 @@
 <template>
     <div>
-        Marinho
     </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
+<script setup lang="ts">
+    const tmdbToken = import.meta.env.VITE_TMDB_API_TOKEN
 
-export default defineComponent({
-    setup () {
-        
 
-        return {}
-    }
-})
 </script>
 
 <style scoped lang="scss">
