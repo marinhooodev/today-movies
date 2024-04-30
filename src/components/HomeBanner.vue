@@ -1,5 +1,5 @@
 <template>
-  <Splide :options="{ rewind: true }">
+  <Splide :options="{ rewind: true, autoplay: true, interval: 5000 }">
     <SplideSlide
       v-for="movie in UpcomingMoviesList"
       :key="movie.id"
@@ -33,7 +33,7 @@
             label="Mais sobre o filme"
             rounded
             class="mt-5 border-2"
-            outlined
+            
           ></Button>
         </div>
 
@@ -43,7 +43,7 @@
               <img
                 :src="baseImgUrl + movie.poster_path"
                 alt=""
-                class="bannerPoster max-w-[200px]"
+                class="bannerPoster max-w-[200px] shadow-lg"
               />
             </div>
           </div>
