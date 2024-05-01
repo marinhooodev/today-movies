@@ -1,12 +1,9 @@
 <template>
-    <div>
-    </div>
+    <HomeBanner />
 </template>
 
 <script setup lang="ts">
-    const tmdbToken = import.meta.env.VITE_TMDB_API_TOKEN
-
-
+    import HomeBanner from './HomeBanner.vue';
 </script>
 
 <style scoped lang="scss">

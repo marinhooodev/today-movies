@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
+    "@splidejs/vue-splide": "^0.6.12",
+    "axios": "^1.6.8",
     "primeicons": "^7.0.0",
     "primevue": "^3.51.0",
     "vue": "^3.4.21",
