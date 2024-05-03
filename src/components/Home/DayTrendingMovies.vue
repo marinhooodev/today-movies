@@ -1,8 +1,8 @@
 <template>
-  
-
-  <div class="mt-10 pl-10">
-    <span class="text-5xl font-extrabold pl-5 mt-5">Os melhores filmes do dia!</span>
+  <div class="mt-10">
+    <span class="text-5xl font-extrabold pl-5 mt-5"
+      >Os melhores filmes do dia!</span
+    >
   </div>
 
   <div class="flex justify-around items-center p-10" v-if="loading">
@@ -25,11 +25,11 @@
           perPage: 4,
         },
         1350: {
-          perPage: 3
+          perPage: 3,
         },
         1050: {
-          perPage: 2
-        }
+          perPage: 2,
+        },
       },
     }"
     aria-label="Os melhores filmes do dia"
@@ -42,7 +42,10 @@
       class="dailySplide flex items-center justify-center relative"
       :data-number="index + 1"
     >
-      <div>
+      <div
+        class="movieBox relative"
+        :data-rating="movie.vote_average.toString().substring(0, 3)"
+      >
         <img
           :src="baseImgUrl + movie.poster_path"
           alt=""
@@ -116,5 +119,25 @@ onMounted(getDayTrendingMovies);
   left: 0;
   z-index: 2;
   text-shadow: 0 0 5px black;
+}
+:global(.movieBox::after) {
+  content: "⭐" attr(data-rating);
+  position: absolute;
+  display: block;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 0 5px 3px 0;
+  color: white;
+  top: 0px;
+  right: 0;
+  z-index: 2;
+  background: #000000a2;
+  backdrop-filter: blur(5px);
+  border-radius: 0px;
+  border-end-start-radius: 10px;
+  box-shadow: 0 0 10px black;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.336);
+  border-left: 1px solid rgba(255, 255, 255, 0.336);
+  
 }
 </style>
