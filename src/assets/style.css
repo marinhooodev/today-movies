@@ -12,6 +12,7 @@
 body {
   font-family: "Inter var";
   background-color: #111;
+  line-height: normal;
 }
 
 h1,h2,h3,h4 {
@@ -33,5 +34,7 @@ h3 {
 h4 {
   @apply text-lg;
 }
+
+
 
 

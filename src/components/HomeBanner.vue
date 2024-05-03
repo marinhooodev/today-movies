@@ -1,5 +1,13 @@
 <template>
-  <Splide :options="{ rewind: true, autoplay: true, interval: 5000 }">
+  <Splide
+    :options="{
+      rewind: true,
+      autoplay: true,
+      interval: 5000,
+      pauseOnHover: true,
+      keyboard: true,
+    }"
+  >
     <SplideSlide
       v-for="movie in UpcomingMoviesList"
       :key="movie.id"
@@ -18,23 +26,27 @@
           <span>{{ movie.release_date.split("-").reverse().join("/") }}</span>
         </div>
         <div class="w-full h-full flex flex-col justify-between items-start">
-          <div class="flex flex-col justify-center h-full">
-            <span class="text-4xl font-extrabold max-w-[50vw] mb-5">{{
+          <div class="flex flex-col justify-center h-full items-start">
+            <span class="text-4xl font-extrabold max-w-[50vw]">{{
               movie.title
             }}</span>
-            <span class="text-lg max-w-[35vw] font-light">
+            <span class="text-sm text-slate-500 mb-5 mt-1"
+              >{{ movie.original_title }} -
+              <i class="fa fa-star text-yellow-300"></i>
+
+              {{ movie.vote_average.toString().substring(0, 3) }}</span
+            >
+            <span class="text-lg max-w-[35vw] font-md text-justify">
               {{ movie.overview }}</span
             >
-          </div>
 
-          <Button
-            icon-pos="right"
-            icon="pi pi-chevron-right"
-            label="Mais sobre o filme"
-            rounded
-            class="mt-5 border-2"
-            
-          ></Button>
+            <Button
+              icon-pos="right"
+              icon="pi pi-chevron-right"
+              label="Mais sobre o filme"
+              class="mt-10 mb-5 border-2 w-auto"
+            ></Button>
+          </div>
         </div>
 
         <div class="h-full flex items-end pr-10">
@@ -141,7 +153,7 @@ export default defineComponent({
   background-image: linear-gradient(
       to right,
       black,
-      rgba(black, 0.6),
+      rgba(black, 0.4),
       transparent
     ),
     var(--bgUrl);
@@ -163,5 +175,37 @@ export default defineComponent({
 .releaseDate {
   background: #00000048;
   backdrop-filter: blur(4px);
+}
+
+:global(.splide__pagination__page) {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  background-color: black;
+  border: 1px solid white;
+}
+
+:global(.splide__pagination__page.is-active) {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+:global(.splide__pagination) {
+  bottom: 20px;
+}
+
+:global(.splide__arrow) {
+  top: unset;
+  bottom: 20px;
+}
+:global(.splide__arrow--next) {
+  left: 80px;
+}
+:global(.splide__arrow--prev) {
+  left: 40px;
+}
+
+span {
+  text-shadow: 0 0 0 black;
 }
 </style>
