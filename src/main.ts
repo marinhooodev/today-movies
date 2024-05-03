@@ -1,6 +1,6 @@
+import '@splidejs/vue-splide/css';
 import "./assets/style.css";
 import "@/assets/keyframes.css";
-import '@splidejs/vue-splide/css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "primeicons/primeicons.css";
 import "primevue/resources/themes/aura-dark-noir/theme.css";
