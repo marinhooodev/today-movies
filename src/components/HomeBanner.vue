@@ -40,13 +40,15 @@
               {{ movie.overview }}</span
             >
 
-            <Button
+          </div>
+
+          <Button
               icon-pos="right"
               icon="pi pi-chevron-right"
               label="Mais sobre o filme"
-              class="mt-10 mb-5 border-2 w-auto"
+              rounded
+              class="mt-5 mb-12 border-2 w-auto"
             ></Button>
-          </div>
         </div>
 
         <div class="h-full flex items-end pr-10">
@@ -191,18 +193,33 @@ export default defineComponent({
 }
 
 :global(.splide__pagination) {
-  bottom: 20px;
+  bottom: 35px;
 }
 
 :global(.splide__arrow) {
   top: unset;
-  bottom: 20px;
+  bottom: 5px;
+  background: white;
+  opacity: 1;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  transition: 0.2s all ease;
 }
 :global(.splide__arrow--next) {
-  left: 80px;
+  left: 120px;
 }
 :global(.splide__arrow--prev) {
-  left: 40px;
+  left: 60px;
+}
+
+:global(.splide__arrow--prev:hover:not(:disabled)) {
+  box-shadow: 0px 0px 0 3px white;
+  opacity: 1;
+}
+:global(.splide__arrow--next:hover:not(:disabled)) {
+  box-shadow: 0px 0px 0 3px white;
+  opacity: 1;
 }
 
 span {
