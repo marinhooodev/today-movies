@@ -1,11 +1,11 @@
 <template>
-    <HomeBanner />
+  <HomeBanner />
+  <DayTrendingMovies />
 </template>
 
 <script setup lang="ts">
-    import HomeBanner from './HomeBanner.vue';
+import DayTrendingMovies from "./DayTrendingMovies.vue";
+import HomeBanner from "./HomeBanner.vue";
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
