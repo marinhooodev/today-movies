@@ -1,7 +1,7 @@
 <template>
-  <section class="flex justify-between items-center rounded-xl border border-slate-700 bg-gradient-to-r from-slate-800 to-slate-900 p-10 mx-3 my-10 shadow-2xl shadow-slate-700">
+  <section class="flex justify-between items-center rounded-xl border border-slate-700 bg-gradient-to-r from-slate-800 to-slate-900 p-10 mx-3 my-10 shadow-2xl shadow-slate-800">
     <div class="flex flex-col justify-center items-start">
-      <span class="text-5xl font-bold">Não encontrou o que procurava?</span>
+      <span class="text-3xl font-bold">Não encontrou o que procurava?</span>
 
       <p class="pt-4 text-2xl">Faça sua pesquisa pela categoria desejada!</p>
     </div>
