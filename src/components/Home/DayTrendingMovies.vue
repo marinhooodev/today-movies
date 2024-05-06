@@ -138,6 +138,5 @@ onMounted(getDayTrendingMovies);
   box-shadow: 0 0 10px black;
   border-bottom: 1px solid rgba(255, 255, 255, 0.336);
   border-left: 1px solid rgba(255, 255, 255, 0.336);
-  
 }
 </style>
