@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex">
+  <div class="min-h-screen flex pt-20">
     <div
       class="w-full max-w-[60vw] flex flex-col justify-center items-center"
       id="pictureSide"

@@ -73,8 +73,8 @@ import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import { defineComponent, onMounted, ref, type Ref } from "vue";
 import "@splidejs/vue-splide/css";
 import axios from "axios";
-import type PopularMovie from "@/interfaces/PopularMovie";
 import Button from "primevue/button";
+import type IUpcomingMovie from "@/interfaces/IUpcomingMovie";
 
 export default defineComponent({
   components: {
@@ -83,14 +83,14 @@ export default defineComponent({
     Button,
   },
   setup() {
-    const UpcomingMoviesList: Ref<PopularMovie[]> = ref([]);
+    const UpcomingMoviesList: Ref<IUpcomingMovie[]> = ref([]);
     const token = import.meta.env.VITE_TMDB_API_TOKEN;
     const lang = "pt-BR";
     const maxResults = 10;
     const baseImgUrl = "https://image.tmdb.org/t/p/original";
     const baseUrl = "https://api.themoviedb.org/3/movie/upcoming";
 
-    const getPopularMovies = async () => {
+    const getUpcomingMovies = async () => {
       try {
         const request = await axios.get(baseUrl, {
           params: {
@@ -111,7 +111,7 @@ export default defineComponent({
       }
     };
 
-    onMounted(getPopularMovies);
+    onMounted(getUpcomingMovies);
 
     const cardStyle = ref({
       transform: "",
@@ -134,7 +134,7 @@ export default defineComponent({
     };
 
     return {
-      getPopularMovies,
+      getUpcomingMovies,
       UpcomingMoviesList,
       baseImgUrl,
       cardStyle,
