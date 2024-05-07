@@ -1,4 +1,4 @@
-export default interface TrendingMovie {
+export default interface ITrendingMovie {
     adult: boolean
     backdrop_path: string
     genre_ids: Array<Number>
