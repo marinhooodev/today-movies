@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex">
+  <div class="min-h-screen flex pt-20">
     <div
       class="p-3 w-full max-w-[40vw] flex flex-col justify-center items-center gap-10"
       id="signUpSide"

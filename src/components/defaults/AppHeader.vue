@@ -1,6 +1,6 @@
 <template>
   <header
-    class="bg-[#0c0c0c] w-full p-5 shadow-lg relative z-10 border-b border-black"
+    class="bg-[#0c0c0c] w-full p-5 shadow-lg fixed z-10 border-b border-black"
   >
     <div class="w-full flex justify-between items-center">
       <div
@@ -13,6 +13,8 @@
         <img :src="Logo" alt="" class="max-w-[30px]" />
         <span>ies</span>
       </div>
+
+      <SearchBar v-if="!searchNotAllowedIn.includes($route.path)" />
 
       <div class="flex gap-2">
         <router-link to="/login">
@@ -33,13 +35,30 @@
        </router-link>
       </div>
     </div>
+
+
+
+
   </header>
+
 </template>
 
 <script setup lang="ts">
 import Logo from "@/assets/vue.svg"
+import axios from "axios";
+import AutoComplete from "primevue/autocomplete";
 import Button from "primevue/button";
+import InputGroup from "primevue/inputgroup";
+import InputGroupAddon from "primevue/inputgroupaddon";
+import InputText from "primevue/inputtext";
+import { ref, type Ref } from "vue";
+import SearchBar from "./SearchBar.vue";
 
+
+const searchNotAllowedIn = [
+  "/login",
+  "/sign-up"
+]
 </script>
 
 <style scoped></style>

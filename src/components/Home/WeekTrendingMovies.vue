@@ -62,7 +62,7 @@ import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import axios from "axios";
 import { ref } from "vue";
 import type { Ref } from "vue";
-import type TrendingMovie from "@/interfaces/TrendingMovie";
+import type ITrendingMovie from "@/interfaces/ITrendingMovie";
 import Skeleton from "primevue/skeleton";
 import { onMounted } from "vue";
 
@@ -70,7 +70,7 @@ const token = import.meta.env.VITE_TMDB_API_TOKEN;
 const baseURL = "https://api.themoviedb.org/3/trending/movie/week";
 const baseImgUrl = "https://image.tmdb.org/t/p/original";
 const lang = "pt-BR";
-const weekMovies: Ref<TrendingMovie[]> = ref([]);
+const weekMovies: Ref<ITrendingMovie[]> = ref([]);
 const loading = ref(true);
 
 const getDayTrendingMovies = async () => {

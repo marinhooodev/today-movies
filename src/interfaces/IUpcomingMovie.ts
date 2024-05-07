@@ -1,4 +1,4 @@
-export default interface UpcomingMovie {
+export default interface IUpcomingMovie {
 
     adult: boolean
     backdrop_path: string
